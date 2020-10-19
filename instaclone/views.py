@@ -24,7 +24,7 @@ def signup(request):
             return redirect('index')
     else:
         form = SignUpForm()
-    return render(request, 'auth/register.html', {'form': form})
+    return render(request, 'registration/register.html', {'form': form})
 
 
 @login_required(login_url='login')
@@ -131,7 +131,7 @@ class PostLikeToggle(RedirectView):
             obj.likes.remove(user)
         else:
             obj.likes.add(user)
-        return url
+        return url_
 
 
 class PostLikeAPIToggle(APIView):
