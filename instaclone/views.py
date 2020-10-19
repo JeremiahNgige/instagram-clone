@@ -24,7 +24,7 @@ def signup(request):
             return redirect('index')
     else:
         form = SignUpForm()
-    return render(request, 'registration/signup.html', {'form': form})
+    return render(request, 'auth/register.html', {'form': form})
 
 
 @login_required(login_url='login')
@@ -117,7 +117,7 @@ def post_comment(request, id):
         'is_liked': is_liked,
         'total_likes': image.total_likes()
     }
-    return render(request, 'instagram/single_post.html', params)
+    return render(request, 'instagram/post_view.html', params)
 
 
 class PostLikeToggle(RedirectView):
@@ -131,7 +131,7 @@ class PostLikeToggle(RedirectView):
             obj.likes.remove(user)
         else:
             obj.likes.add(user)
-        return url_
+        return url
 
 
 class PostLikeAPIToggle(APIView):
@@ -178,7 +178,7 @@ def like_post(request):
         'total_likes': image.total_likes()
     }
     if request.is_ajax():
-        html = render_to_string('instagram/like_section.html', params, request=request)
+        html = render_to_string('instagram/like.html', params, request=request)
         return JsonResponse({'form': html})
 
 
