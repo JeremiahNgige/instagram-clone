@@ -4,6 +4,8 @@
 
 ## Description
 
+    ![modal view](https://raw.githubusercontent.com/JeremiahNgige/gallery/master/gallery/static/imgs/picscreen.png)
+
 ### Technologies
 
 * Python3.8.
