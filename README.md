@@ -4,7 +4,7 @@
 
 ## Description
 
-    ![modal view](https://raw.githubusercontent.com/JeremiahNgige/gallery/master/gallery/static/imgs/picscreen.png)
+    ![modal view](https://raw.githubusercontent.com/JeremiahNgige/instagram-clone/master/static/images/igscrn.png)
 
 ### Technologies
 
